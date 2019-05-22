@@ -1,5 +1,6 @@
 package gn.traore.controller;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import gn.traore.CustomerDAO;
+import gn.traore.dao.CustomerDAO;
 import gn.traore.model.Customer;
 
 @Controller
@@ -29,7 +30,7 @@ public class MainController {
 	}
 
 	private void addCustomers() {
-		List<Customer> customers = List.of(
+		List<Customer> customers = Arrays.asList(
 				new Customer("TRAORE", "FASS CASIER", "Excellent"),
 				new Customer("DIARRA", "LIBERTE 6", "Moyen"),
 				new Customer("DIENE", "FASS MBAO", "Mauvais")
